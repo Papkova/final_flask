@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block title %}Title of the Page{% endblock %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container {
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+</head>
+
+<body>
+  <main class="flex-shrink-0">
+    <div class="container">
+      <h2 class="mt-5">Flask</h2>
+      <!-- Вставка фото -->
+        <p class="lead" style="word-wrap: break-word; text-align: left;">Flask - це легкий фреймворк для побудови веб-додатків на мові програмування Python. Він дозволяє швидко створювати веб-<br>додатки з мінімальними зусиллями завдяки своїй простоті та гнучкості.</p>
+        <p style="text-align: left;">1.Установка Flask: Flask можна легко встановити за допомогою pip, стандартного менеджера пакетів Python:</p>
+        <img src="../static/img/src/img.png" height="56" width="212"/>
+        <p style="text-align: left;">2.Структура проекту: Flask не накладає жорстких правил стосовно структури проекту, але зазвичай використовується певна організація. Наприклад:</p>
+        <img src="../static/img/src/img_1.png" height="173" width="273"/>
+        <p>app.py: Основний файл додатка Flask.<br>templates/: Каталог для HTML-шаблонів. <br>static/: Каталог для статичних файлів, таких як CSS, JavaScript, зображення.</p>
+        <p style="text-align: left;">3.Створення додатку: Простий приклад створення додатку Flask:</p>
+        <img src="../static/img/src/img_2.png" height="265" width="399"/>
+        <p style="text-align: left;">4.Створіть шаблони: Визначте шаблони у папці templates. Наприклад, index.html:</p>
+        <img src="../static/img/src/img_3.png" height="277" width="432"/>
+        <p style="text-align: left;">5.Щоб створити базу даних, нам потрібно створити Python package і назвати його models. Приклад того, як у нас буде виглядати структура:</p>
+        <img src="../static/img/src/img_4.png" height="232" width="351"/>
+        <p style="text-align: left;">6.Приклад як виглядає __init__.py який знаходиться в models</p>
+        <img src="../static/img/src/img_5.png" height="144" width="434"/>
+        <p style="text-align: left;">7.Цей код створює з'єднання з базою даних SQLite, об'єкт сесії для взаємодії з базою даних та базовий клас для визначення моделей даних. Функція create_db() викликає метод create_all(), щоб створити всі таблиці, визначені у вашому проекті.</p>
+        <img src="../static/img/src/img_6.png" height="383" width="791"/>
+        <p style="text-align: left;">8.Потім ми у коді визначається модель користувача для зберігання їхніх даних у базі даних. Клас User успадковує клас UserMixin з Flask-Login і базовий клас Base для створення моделі. Визначаються колонки таблиці, такі як id, username, email, image_file та password, які відповідають відповідним полям користувача. Метод __repr__ використовується для представлення об'єкта користувача в рядковому форматі.</p>
+        <img src="../static/img/src/img_7.png" height="475" width="935"/>
+        <p style="text-align: left;">9.А тепер ми створюємо model в нашому проекті. Наприклад:</p>
+        <img src="../static/img/src/img_8.png" height="243" width="204"/>
+        <p style="text-align: left;">10.Тут ми викликає функцію create_db(), яка створює базу даних за допомогою SQLAlchemy на основі описаних моделей даних у вашому додатку.</p>
+        <img src="../static/img/src/img_9.png" height="156" width="460"/>
+      <p style="text-align: left;">Отже, ми навчилися створювати базу даних і побачили, як повинна виглядати структура проекту</p>
+      <img src="../static/img/src/img_10.png" height="200" width="618"/>
+    </div>
+</main>
+
+
+
+</body>
+</html>
+{% endblock %}

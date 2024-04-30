@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Список постів
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Список постів</h1>
+    {% for post in posts %}
+    <div class="alert alert-success">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.intro }}</p>
+        <p><b>Дата та час створення: {{ post.date }}</b></p>
+        <a href="/posts/{{ post.id }}" class="btn btn-success">Детальніше</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

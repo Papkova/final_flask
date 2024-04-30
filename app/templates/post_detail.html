@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>{{ post.title }}</h1>
+    <div class="alert alert-info">
+        <p>{{ post.text }}</p>
+        <p><b>Дата та час створення: {{ post.date }}</b></p>
+        <a href="/posts/{{ post.id }}/delete" class="btn btn-danger">Видалити</a>
+        <a href="/posts/{{ post.id }}/update" class="btn btn-secondary">Редагувати</a>
+    </div>
+</div>
+{% endblock %}
